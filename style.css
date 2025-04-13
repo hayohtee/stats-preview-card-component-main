@@ -18,6 +18,84 @@
     --font-inter: "Inter", sans-serif;
 }
 
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    text-align: center;
+}
+
+.violet {
+    color: var(--color-violet);
+}
+
+.main-container {
+    background-color: var(--color-dark-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em;
+    border-radius: 1em;
+}
+
+.card-container {
+    padding: 2em;
+    text-align: center;
+}
+
+.hero {
+    border-start-start-radius: 0.5em;
+    border-start-end-radius: 0.5em;
+    width: 100%;
+    height: 300px;
+    background-image: url('images/image-header-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-violet);
+    background-blend-mode: multiply;
+}
+
+
+.header h1 {
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.header p {
+    font-weight: 400;
+    color: var(--color-white-100);
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.stack > * + * {
+    margin-top: 1.5em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.stat-container span {
+    display: block;
+    text-transform: uppercase;
+}
+
+.stat-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -25,4 +103,71 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.stat-body {
+    margin-top: 0.5em;
+    color: var(--color-white-200);
+}
+
+@media (min-width: 468px) {
+    .hero {
+        height: 400px;
+    }
+}
+
+@media (min-width: 600px) {
+    .hero {
+        height: 500px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        align-items: center;
+    }
+    .main-container {
+        flex-direction: row-reverse;
+        max-width: 992px;
+        margin-inline: 2em;
+        border-radius: 0.5em;
+    }
+
+    .hero {
+        flex: 1;
+        background-image: url('images/image-header-desktop.jpg');
+        border-radius: 0;
+        height: auto;
+        border-start-end-radius: 0.5em;
+        border-end-end-radius: 0.5em;
+        background-color: var(--color-violet);
+        background-blend-mode: multiply;
+    }
+
+    img {
+        border-radius: 0;
+        border-start-end-radius: 0.5em;
+        border-end-end-radius: 0.5em;
+    }
+
+
+    .stack > * + * {
+        margin-top: 2em;
+    }
+
+    .card-container {
+        padding: 3em;
+        flex: 1;
+    }
+
+    .stat-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
