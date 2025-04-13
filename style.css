@@ -6,6 +6,12 @@
     padding: unset;
 }
 
+:root {
+    --color-black: hsl(233, 47%, 7%);
+    --color-dark-blue:  hsl(244, 38%, 16%);
+    --color-violet:  hsl(277, 64%, 61%);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
